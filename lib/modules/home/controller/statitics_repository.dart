@@ -8,8 +8,6 @@ class StatiticsRepository extends ChangeNotifier {
   final String url =
       'https://api.brasil.io/v1/dataset/covid19/caso/data/?da=&format=json&search=';
   List<Covid> statitics = [];
-  bool isLoading = false;
-  String state = 'MG';
 
   getData() async {
     final response = await dio.get(url,
